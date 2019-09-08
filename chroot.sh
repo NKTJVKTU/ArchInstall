@@ -46,7 +46,7 @@ options root=PARTUUID=$ROOT_PARTUUID rw" > /boot/loader/entries/arch.conf
 ln -s /dev/null /etc/tmpfiles.d/linux-firmware.conf
 cd /boot && pacman -S amd-ucode --noconfirm
 
-echo "Введите новый пароль для ROOT"
+echo "Change root password: "
 passwd
 
 exit
