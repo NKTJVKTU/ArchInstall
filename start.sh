@@ -54,8 +54,8 @@ sed -i "1i $mirror_server" /etc/pacman.d/mirrorlist
 pacstrap /mnt base base-devel --noconfirm
 genfstab -U /mnt >> /mnt/etc/fstab
 cd /mnt/home
-curl -fsSL https://raw.githubusercontent.com/NKTJVKTU/Automatic-Arch-install/master/Install2.sh -o continue.sh
-chmod +x /mnt/home/continue.sh
+curl -fsSL https://raw.githubusercontent.com/NKTJVKTU/ArchInstall/master/chroot.sh -o chroot.sh
+chmod +x /mnt/home/chroot.sh
 
-arch-chroot /mnt /home/./continue.sh |& tee continue.log
+arch-chroot /mnt /home/./chroot.sh |& tee continue.log
 #____________________END OF PART ONE
